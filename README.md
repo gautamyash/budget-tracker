@@ -63,7 +63,16 @@ REACT_APP_API_URL=http://localhost:5000/api
    ```bash
    npm start
    ```
-5. Visit `http://localhost:3000` in the browser. The React app proxies API requests to the backend at `http://localhost:5000/api`.
+   The app will be available at `http://localhost:3000`.
+
+## 🔐 Test Account
+
+Use the following credentials to log in and test the application:
+
+- **Email:** john@example.com
+- **Password:** 123456
+
+> ⚠️ This is a test account. For security reasons, avoid using real financial data.
 
 ## 📡 API Overview
 
