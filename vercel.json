@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "budget-tracker-frontend/package.json",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "budget-tracker-backend/src/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "budget-tracker-backend/src/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "budget-tracker-frontend/$1"
+    }
+  ]
+}
