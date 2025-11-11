@@ -3,21 +3,29 @@
   "builds": [
     {
       "src": "budget-tracker-frontend/package.json",
-      "use": "@vercel/static-build"
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
     },
     {
-      "src": "budget-tracker-backend/src/server.js",
+      "src": "api/[...path].js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "budget-tracker-backend/src/server.js"
+      "dest": "/api/[...path]"
     },
     {
       "src": "/(.*)",
-      "dest": "budget-tracker-frontend/$1"
+      "dest": "/budget-tracker-frontend/$1"
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "buildCommand": "cd budget-tracker-frontend && npm install && npm run build",
+  "outputDirectory": "budget-tracker-frontend/build"
 }

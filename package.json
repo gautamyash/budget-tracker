@@ -1,0 +1,18 @@
+{
+  "name": "budget-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd budget-tracker-backend && npm run dev\" \"cd budget-tracker-frontend && npm start\"",
+    "build": "cd budget-tracker-frontend && npm install && npm run build",
+    "start": "cd budget-tracker-backend && npm start",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix budget-tracker-frontend && npm run build --prefix budget-tracker-frontend"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
