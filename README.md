@@ -112,7 +112,7 @@ NODE_ENV=development
 
 **For MongoDB Atlas:**
 ```env
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/budget-tracker?retryWrites=true&w=majority
+MONGO_URI=<your_mongodb_atlas_connection_string>
 ```
 
 ### 3. Frontend Setup

@@ -58,7 +58,7 @@ Before deploying, ensure you have:
 
 Example:
 ```
-mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/budget-tracker?retryWrites=true&w=majority
+mongodb+srv://<username>:<password>@<cluster>/<database>?retryWrites=true&w=majority
 ```
 
 ## 🚀 Backend Deployment (Using Render)
